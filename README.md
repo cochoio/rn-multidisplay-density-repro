@@ -37,6 +37,14 @@ override fun onConfigurationChanged(newConfig: Configuration) {
 
 A proper core fix would be RN keeping `DisplayMetricsHolder` in sync with the display the surface is attached to.
 
+## Screenshots (from the production app where this was first hit)
+
+| Bug A — content in a 1/density box | Bug B — text clipping (after fixing A only) | Both fixed |
+|---|---|---|
+| ![before](https://cdn.avarlabs.com/7a7085a6-5b4c-4e01-b5b4-bec8944d5831.jpg) | ![broken text](https://cdn.avarlabs.com/8e3b452b-27f0-4a81-a108-19f5ad287652.jpg) | ![after](https://cdn.avarlabs.com/4fc044b2-5aa0-40ba-987c-b43c036a4625.jpg) |
+
+(The dark card is the in-app diagnostic overlay used for the measurements above.)
+
 ## How to run
 
 ```bash
